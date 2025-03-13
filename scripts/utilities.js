@@ -12,7 +12,8 @@ function  getInnerTextById(id){
     const convertedValue =parseInt(value);
     return convertedValue;
 }*/
-document.getElementById("backBtn").addEventListener('click',function()
+document.getElementById("backBtn").addEventListener('click',function(event)
 {
-  window.location.href="/index.html";
+    event.preventDefault(); 
+    history.back();
 })
