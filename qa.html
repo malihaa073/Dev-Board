@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:,">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
+        </style>
+
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    'clifford' : ['#da373d'],
+                    's': ['#FFF9F4'],
+                  },
+                  fontFamily: {
+                    'ADLaM': [' "ADLaM Display" ', 'serif'],
+                    'sora':['Sora','serif'],
+                    'poppins': ['Poppins', 'sans-serif']
+                  },
+               
+        
+                },
+              },
+            }
+          </script>
+
+</head>
+<body class="bg-[#F4F7FF] py-6 px-24 font-poppins ">
+    <header class="m-5 px-5 bg-white py-3 ">
+        <nav class="flex flex-row justify-between  rounded-[16px]">
+            <div class="flex flex-row gap-3 items-center">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="text-2xl">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class=" gap-3">
+              <button id="backBtn" class="rounded-[8px] bg-[#3752FD] text-2xl text-white px-5 py-3">Back to Desk</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-[#F4F7FF]">
+        <h1 class="text-2xl text-center font-bold">Blog</h1>
+        <div class="mt-10">
+            <div>
+                <p class="text-2xl bg-white px-3 py-4 mb-2 font-bold">Question-1: What are the different ways to select an element in the DOM?</p>
+                <p class="text-2xl bg-white px-3 py-4 mb-5 ">By using id,class,name,tag,query selector an element can be select in DOM.<br>getElementById is used when targeting a unique element ID. getElementsByClassName allows selection of multiple elements by their class, while getElementsByTagName targets elements by their tag type. querySelector is used to select the first matching element using a CSS selector, and querySelectorAll is used for selecting multiple elements with a CSS selector. getElementsByName is used to select form elements by their name attribute.</p>
+            </div>
+            <div>
+                <p class="text-2xl bg-white px-3 py-4 mb-2 font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+                <p class="text-2xl bg-white px-3 py-4 mb-5 ">innerHTML  retrieves or sets the entire HTML content inside an element, including child elements and tags. innerText Retrieves only the visible text, ignoring hidden elements. It ensures that hidden text remains invisible. textContent Retrieves the raw text content, including both hidden and visible text, without formatting.</p>
+            </div>
+            <div>
+                <p class="text-2xl bg-white px-3 py-4 mb-2 font-bold">Question-3: What is event delegation in the DOM? </p>
+                <p class="text-2xl bg-white px-3 py-4 mb-5 ">When an event occurs, such as a click, event delegation allows us to handle it at a higher-level parent instead of attaching event listeners to multiple child elements. This is useful when dealing with dynamically added elements.
+
+                    For example, instead of adding a click event to each child element, we can attach the event listener to their parent. When a child is clicked, the event bubbles up to the parent, which then detects and handles the event accordingly.</p>
+            </div>
+            <div>
+                <p class="text-2xl bg-white px-3 py-4 mb-2 font-bold">Question-4: What is event bubbling in the DOM?</p>
+                <p class="text-2xl bg-white px-3 py-4 mb-5 ">When an event occurs, such as a click, it is first triggered on the specific element where the action happens. This event then bubbles up from the target element to its parent and continues upward through the DOM hierarchy until it reaches the document object.
+
+                    For example, if a click event happens on a child element, it is triggered on the child first. Then, the event bubbles up to its parent, triggering the parent's event handler as well. </p>
+            </div>
+            <div>
+                <p class="text-2xl bg-white px-3 py-4 mb-2 font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+                <p class="text-2xl bg-white px-3 py-4 mb-5 ">By using document.createElement() we can create an element.
+                then by using .append() .appendChild()  .innerHTML() we can add element.
+                 Lastly by using .remove() and.removeChild() we can remove an element.<br>Here giving a example:<br><br>
+                 <span class="text-1xl text-gray-500">
+                    const CreateDiv = document.createElement("div"); //create a new div <br>
+                    CreateDiv.innerText = "this is a div"//add text inside it;<br>
+                    const container = document.getElementById("containerSection"); <br>
+                    container.appendChild(CreateDiv);// added div inside the containerSection id <br>
+                    const heading = document.getElementById("head-p");
+                    container.removeChild(heading); // Removes the heading from its parent</span>
+
+                </p>
+            </div>
+        </div>
+    
+    </main>
+
+    <script src="./scripts/fun.js" ></script>
+    <script src="./scripts/utilities.js" ></script>
+</body>
+</html>

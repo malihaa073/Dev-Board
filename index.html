@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:,">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
+        </style>
+
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    'clifford' : ['#da373d'],
+                    's': ['#FFF9F4'],
+                  },
+                  fontFamily: {
+                    'ADLaM': [' "ADLaM Display" ', 'serif'],
+                    'sora':['Sora','serif'],
+                    'poppins': ['Poppins', 'sans-serif']
+                  },
+               
+        
+                },
+              },
+            }
+          </script>
+
+</head>
+<body class="bg-[#F4F7FF] py-6 px-24 font-poppins ">
+    <header class="m-5 px-5 bg-white py-3 ">
+        <nav class="flex flex-row justify-between  rounded-[16px]">
+            <div class="flex flex-row gap-3 items-center">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="text-2xl">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="flex flex-row items-center gap-3">
+                <img src="./assets/checkbox.png" alt="" srcset="">
+                <p id="finishTask">23</p>
+                <img id="colorBtn" src="./assets/theme-btn.png" alt="" srcset="">
+            </div>
+        </nav>
+    </header>
+
+    <main class=" w-full flex flex-row gap-5     px-5 mr-16">
+
+        <div class="w-4/5  flex flex-col  bg-white"> 
+ <!--1st part-->
+         <div  class="flex flex-row justify-around gap-5 py-4 w-full">
+    <!--1-->
+         <div class="flex flex-row gap-3 rounded-md items-center w-[360px] bg-[#F4F7FF] ">
+            <div class="bg-white p-3 ml-3 rounded-sm" >
+               <img src="./assets/checkbox.png" alt="">
+            </div>
+            <div class="flex flex-col mr-5">
+               <p class="text-gray-600">Task Assigned</p>
+               <p id="task" class="font-bold text-2xl">6</p>
+            </div>
+            </div>
+   <!--2-->
+           <div class="flex flex-row p-4 gap-3 rounded-[12px]  items-center justify-start bg-gradient-to-br from-[#3752fd] via-[#6c7ffa] to-[#9ba8f8] w-[542px]">
+               <img src="./assets/board.png" alt="" srcset="">
+               <p id="qa-btn" class="text-white text-3xl">Discover Something<br> New Today!</p>
+           </div>
+   <!--3-->
+            <div class="flex flex-row gap-3 rounded-md items-center w-[343px] bg-[#F4F7FF] ">
+            <div class="bg-white p-3 ml-3 " >
+               <img src="./assets/calender.png" alt="">
+            </div>
+            <div class="flex flex-col mr-5">
+               <p id="date" class="text-gray-600"></p>
+            </div>
+            </div>
+         </div>
+
+<!--2nd part-->
+        <div id="parentNode" class="grid grid-cols-3 mt-10 grid-rows-2 gap-y-7 gap-x-1 mr-5 pb-28">
+            <!--card-1-->
+           <div class="p-3 ml-5 pb-9  rounded-[16px] bg-[#F4F7FF]">
+            <p class="  mt-5 mb-3 pb-5 rounded-[8px]"><span class="px-4 py-2  bg-white">ShopEase</span></p>
+            <h3 id="c1" class="text-2xl pb-3 font-poppins font-bold">Fix Mobile Button Issue </h3>
+            <p class="box-border border border-dashed border-transparent rounded-md text-gray-400 bg-white p-3 ">A card components has a figure,a body part,an inside <br> body there are title and actions part</p>
+                <div class="flex flex-row mt-5 justify-between">
+                    <p ><span class="text-gray-400">Deadline </span><br>21 March 2025</p>
+                    <button id="fixMobileBtn" class="rounded-[8px] bg-[#3752FD] text-white px-4 py-2 ">Completed</button>
+                </div>
+           </div>
+     <!--card-2-->
+           <div class="p-3 ml-5 pb-9  rounded-[16px] bg-[#F4F7FF]">
+            <p class="  mt-5 mb-3 pb-5 rounded-[8px]"><span class="px-4 py-2 bg-white">CloudSync</span></p>
+            <h3 id="c2" class="text-2xl pb-3 font-poppins font-bold">Add Dark Mode</h3>
+            <p class="box-border border border-dashed border-transparent rounded-md text-gray-400 bg-white p-3 ">A card components has a figure,a body part,an inside <br> body there are title and actions part</p>
+                <div class="flex flex-row mt-5 justify-between">
+                    <p><span class="text-gray-400">Deadline </span><br>21 March 2025</p>
+                    <button id="addDarkBtn" class="rounded-[8px] bg-[#3752FD] text-white px-4 py-2">Completed</button>
+                </div>
+           </div>
+        <!--card-3-->
+        <div class="p-3 ml-5 pb-9 rounded-[16px] bg-[#F4F7FF]">
+            <p class="  mt-5 mb-3 pb-5 rounded-[8px]"><span class="px-4 py-2 bg-white">SwiftPay</span></p>
+            <h3 id="c3" class="text-2xl pb-3 font-poppins font-bold">Optimize  Home page  </h3>
+            <p class="box-border border border-dashed border-transparent rounded-md text-gray-400 bg-white p-3 ">A card components has a figure,a body part,an inside <br> body there are title and actions part</p>
+                <div class="flex flex-row mt-5 justify-between">
+                    <p><span class="text-gray-400">Deadline </span><br>21 March 2025</p>
+                    <button id="optimizeHomeBtn" class="rounded-[8px] bg-[#3752FD] text-white px-4 py-2">Completed</button>
+                </div>
+           </div>
+     <!--card-4-->
+           <div class="p-3 ml-5 pb-9 rounded-[16px] bg-[#F4F7FF]">
+            <p class="  mt-5 mb-3 pb-5 rounded-[8px]"><span class="px-4 py-2 bg-white">Meta</span></p>
+            <h3 id="c4" class="text-2xl pb-3 font-poppins font-bold">Add new emoji 🤲 </h3>
+            <p class="box-border border border-dashed border-transparent rounded-md text-gray-400 bg-white p-3 ">A card components has a figure,a body part,an inside <br> body there are title and actions part</p>
+                <div class="flex flex-row mt-5 justify-between">
+                    <p><span class="text-gray-400">Deadline </span><br>21 March 2025</p>
+                    <button id="emojiBtn" class="rounded-[8px] bg-[#3752FD] text-white px-4 py-2">Completed</button>
+                </div>
+           </div>
+
+        <!--card-5-->
+           <div class="p-3 ml-5 pb-9  rounded-[16px] bg-[#F4F7FF]">
+            <p class="  mt-5 mb-3 pb-5 rounded-[8px]"><span class="px-4 py-2 bg-white">Google LLC</span></p>
+            <h3 id="c5" class="text-2xl pb-3 font-poppins font-bold">Integrate OpenAI API </h3>
+            <p class="box-border border border-dashed border-transparent rounded-md text-gray-400 bg-white p-3 ">A card components has a figure,a body part,an inside <br> body there are title and actions part</p>
+                <div class="flex flex-row mt-5 justify-between">
+                    <p><span class="text-gray-400">Deadline </span><br>21 March 2025</p>
+                    <button id="AiBtn" class="rounded-[8px] bg-[#3752FD] text-white px-4 py-2">Completed</button>
+                </div>
+           </div>
+     <!--card-6-->
+           <div class="p-3 ml-5 pb-9  rounded-[16px] bg-[#F4F7FF]">
+            <p class="  mt-5 mb-3 pb-5 rounded-[8px]"><span class="px-4 py-2  bg-white">Glassdoar</span></p>
+            <h3 id="c6" class="text-2xl pb-3 font-poppins font-bold">Improve Job searching  </h3>
+            <p class="box-border border border-dashed border-transparent rounded-md text-gray-400 bg-white p-3 ">A card components has a figure,a body part,an inside <br> body there are title and actions part</p>
+                <div class="flex flex-row mt-5 justify-between">
+                    <p><span class="text-gray-400">Deadline </span><br>21 March 2025</p>
+                    <button id="jobSearchBtn" class="rounded-[8px] bg-[#3752FD] text-white px-4 py-2">Completed</button>
+                </div>
+           </div>
+    
+
+        </div>
+        </div>
+        <div id="" class="w-1/5 items-center bg-white space-y-2 px-2 justify-center">
+            <div class="flex flex-row items-center gap-3 pt-5 justify-center">
+                <img src="./assets/activity.png" alt="" srcset="">
+                <p class="font-bold">Activity Log</p>
+            </div>
+            <button id="clearHistoryBtn" class="rounded-[8px] bg-[#3752FD] text-white  px-4 py-2 items-center ml-32 mt-5 ">Clear History</button>
+            <div id="activityLog" class="flex flex-col justify-center items-center  text-gray-600 bg-white"></div>
+        </div>
+    </main>
+    <script src="./scripts/fun.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+</body>
+</html>
