@@ -12,8 +12,12 @@ function  getInnerTextById(id){
     const convertedValue =parseInt(value);
     return convertedValue;
 }*/
-document.getElementById("backBtn").addEventListener('click',function(event)
-{
-    event.preventDefault(); 
-    history.back();
+document.addEventListener("DOMContentLoaded", function () {
+    const backBtn = document.getElementById("backBtn");
+
+    if (backBtn) {
+        backBtn.addEventListener("click", function () {
+            window.history.back(); // Navigates to the previous page
+        });
+    }
 })
